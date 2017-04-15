@@ -1,0 +1,6 @@
+C:\Users\Steven\Documents\GitHub\src\LargestPalindromeProduct\LargestPalindromeProduct\bin\Debug\LargestPalindromeProduct.exe.config
+C:\Users\Steven\Documents\GitHub\src\LargestPalindromeProduct\LargestPalindromeProduct\bin\Debug\LargestPalindromeProduct.exe
+C:\Users\Steven\Documents\GitHub\src\LargestPalindromeProduct\LargestPalindromeProduct\bin\Debug\LargestPalindromeProduct.pdb
+C:\Users\Steven\Documents\GitHub\src\LargestPalindromeProduct\LargestPalindromeProduct\obj\Debug\LargestPalindromeProduct.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\GitHub\src\LargestPalindromeProduct\LargestPalindromeProduct\obj\Debug\LargestPalindromeProduct.exe
+C:\Users\Steven\Documents\GitHub\src\LargestPalindromeProduct\LargestPalindromeProduct\obj\Debug\LargestPalindromeProduct.pdb
