@@ -16,23 +16,65 @@ namespace LargestPalindromeProduct
         //Find the largest palindrome made from the product of two 3-digit numbers.
         static void Main(string[] args)
         {
-            long result = 0;
-            for (int x = 999; x >= 100; x--)
+            int longestPalindrome = 0;
+            int firstValue = 999, secondValue = 100;
+            int divisible = 0;
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            while(firstValue >= 100)
             {
-                for (int y = 999; y >= 100; y--)
+                if (firstValue % 11 == 0)
                 {
-                    long num = x * y;
-                    if (num.ToString() == StringFunctions.ReverseString(num.ToString()))
-                    {
-                        if (result < num)
-                        {
-                            result = num;
-                        }
-                    }
+                    secondValue = 999;
+                    divisible = 1;
                 }
+                else
+                {
+                    secondValue = 990;
+                    divisible = 11;
+                }
+
+                while(secondValue >= firstValue)
+                {
+                    if((firstValue * secondValue) <= longestPalindrome)
+                    {
+                        break;
+                    }
+
+                    string stringValue = Convert.ToString(firstValue * secondValue);
+
+                    if (StringFunctions.ReverseString(stringValue) == stringValue)
+                    {
+                        longestPalindrome = firstValue * secondValue;
+                    }
+
+                    secondValue = secondValue - divisible;
+                }
+
+                firstValue--;
             }
 
-            Console.WriteLine("Result: {0}", result);
+            sw.Stop();
+            
+            //long result = 0;
+            //for (int x = 999; x >= 100; x--)
+            //{
+            //    for (int y = 999; y >= 100; y--)
+            //    {
+            //        long num = x * y;
+            //        if (num.ToString() == StringFunctions.ReverseString(num.ToString()))
+            //        {
+            //            if (result < num)
+            //            {
+            //                result = num;
+            //            }
+            //        }
+            //    }
+            //}
+
+            Console.WriteLine("Result: {0}", longestPalindrome);
+            Console.WriteLine("Time in Milliseconds: {0}", sw.ElapsedMilliseconds);
             Console.ReadLine();
         }
 
